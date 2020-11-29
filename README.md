@@ -14,5 +14,7 @@ Develop a real estate listing site that fills the gaps in the current market. Co
 
 AWS Lambda, Dynamo DB, S3 Buckets, React JS
 
+## Architecture 
+![High Level](/readme-assets/basic-architecture.png)
 ## Screen Shots
 ...Coming Soon
