@@ -1,9 +1,8 @@
-
-
+import DataDisplay from './components/DataDisplay'
 function App() {
   return (
     <div className="App">
-      App
+      <DataDisplay></DataDisplay>
     </div>
   );
 }
