@@ -2,7 +2,7 @@
 
 const DataItem = (props) => {
   return (
-        <p>{props.itemText}</p>
+    <p key ={props.item.propertyId} id = {"item-"+props.item.propertyId}>{JSON.stringify(props.item)}</p>
   )
 }
 
