@@ -1,11 +1,17 @@
+import React, { Component } from 'react';
+import PropertyDisplay from './components/containers/PropertyDisplay'
+import Layout from './components/Layout/Layout'
 
-
-function App() {
-  return (
-    <div className="App">
-      App
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Layout>
+          <PropertyDisplay/>
+        </Layout>
+      </div>
+    );
+  }
 }
 
 export default App;
