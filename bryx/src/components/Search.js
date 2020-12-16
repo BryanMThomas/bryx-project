@@ -54,7 +54,7 @@ export const Search = () => {
           <div className="overlay"></div>
           <Container>
             <h1>Find Your Dream Home</h1>
-            <p>start your journey</p>
+            <p>start your journey today</p>
           </Container>
         </Jumbotron>
         <Form>

@@ -12,6 +12,7 @@ const Styles = styled.div`
     &:hover {
       color: black;
     }
+    font-family: 'Alfa Slab One';
   }
   .navbar-nav .nav-link {
     color: #efefef;
