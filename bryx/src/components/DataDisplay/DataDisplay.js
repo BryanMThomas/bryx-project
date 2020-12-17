@@ -29,7 +29,7 @@ const DataDisplay = () => {
   else {
     return (
       <div>
-        {responseData.map((element) => <DataItem item = {element}></DataItem>)}
+        {responseData.map((element,index) => <DataItem item = {element} key = {`dataitem-${index}`}></DataItem>)}
       </div>)
   }
 }
