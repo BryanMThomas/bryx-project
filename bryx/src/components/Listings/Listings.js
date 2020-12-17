@@ -1,5 +1,5 @@
 import React from "react";
-import DataDisplay from "../DataDisplay/DataDisplay";
+import {Properities} from "../Properties/Properties";
 import { Filter } from "./Filter/Filter";
 import styled from "styled-components";
 
@@ -26,13 +26,12 @@ margin-left: 3%;
 `;
 export const Listings = () => {
   return (
-
     <Styles>
       <div className="listingsFilter">
         <Filter />
       </div>
       <div className="listingsData">
-        <DataDisplay />
+        <Properities />
       </div>
     </Styles>
   );
