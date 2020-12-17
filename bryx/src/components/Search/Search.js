@@ -1,6 +1,5 @@
 import React from "react";
 import { Form, Button, Jumbotron, Container } from "react-bootstrap";
-import { Layout } from "../Layout/Layout";
 import styled from "styled-components";
 import homeImg from "../../assets/home.jpeg";
 

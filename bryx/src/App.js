@@ -1,6 +1,5 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom' 
-import {Layout} from './components/Layout/Layout'
 import {Listings} from './components/Listings/Listings'
 import {Search} from './components/Search/Search'
 import {NoMatch} from './components/NoMatch/NoMatch'
