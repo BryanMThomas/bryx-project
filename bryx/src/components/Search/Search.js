@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Button, Jumbotron, Container } from "react-bootstrap";
+import { Layout } from "../Layout/Layout";
 import styled from "styled-components";
 import homeImg from "../../assets/home.jpeg";
 
@@ -48,29 +49,31 @@ const Styles = styled.div`
 `;
 export const Search = () => {
   return (
-    <Styles>
-      <div>
-        <Jumbotron fluid className="jumbo">
-          <div className="overlay"></div>
-          <Container>
-            <h1>Find Your Dream Home</h1>
-            <p>start your journey today</p>
-          </Container>
-        </Jumbotron>
-        <Form>
-          <Form.Group className="searchForm" controlId="addressSearch">
-            <Form.Control
-              className="searchForm"
-              size="lg"
-              type="text"
-              placeholder="Enter an address, city, or ZIP code"
-            />
-          </Form.Group>
-          <Button className="searchButton" size="lg" variant="secondary">
-            Search
-          </Button>
-        </Form>
-      </div>
-    </Styles>
+    <Container>
+      <Styles>
+        <div>
+          <Jumbotron fluid className="jumbo">
+            <div className="overlay"></div>
+            <Container>
+              <h1>Find Your Dream Home</h1>
+              <p>start your journey today</p>
+            </Container>
+          </Jumbotron>
+          <Form>
+            <Form.Group className="searchForm" controlId="addressSearch">
+              <Form.Control
+                className="searchForm"
+                size="lg"
+                type="text"
+                placeholder="Enter an address, city, or ZIP code"
+              />
+            </Form.Group>
+            <Button className="searchButton" size="lg" variant="secondary">
+              Search
+            </Button>
+          </Form>
+        </div>
+      </Styles>
+    </Container>
   );
 };
