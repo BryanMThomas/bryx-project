@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Button, Jumbotron, Container } from "react-bootstrap";
 import styled from "styled-components";
-import homeImg from "../assets/home.jpeg";
+import homeImg from "../../assets/home.jpeg";
 
 const Styles = styled.div`
   div {
