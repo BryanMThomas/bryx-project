@@ -8,7 +8,7 @@ margin-top: 2%;
 margin-left: 3%;
   .listingsFilter {
     width: 30%;
-    max-width: 400px;
+    max-width: 425px;
     display: inline-block;
     float: left;
     background-color: #d3d3d3;
