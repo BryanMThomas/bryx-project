@@ -1,14 +1,13 @@
 import React from "react";
 import { Form, Button, Jumbotron, Container } from "react-bootstrap";
 import styled from "styled-components";
-import homeImg from "../../assets/home.jpeg";
 
 const Styles = styled.div`
   div {
     margin-top: 45px;
   }
   .jumbo {
-    background: url(${homeImg}) no-repeat fixed center;
+    background: url(https://bryx-project.s3-us-west-2.amazonaws.com/homeImages/homePage.jpeg) no-repeat fixed center;
     background-size: auto 500px;
     color: #efefef;
     height: 500px;
