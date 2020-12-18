@@ -1,11 +1,11 @@
-import React from "react";
-import {Properities} from "../Properties/Properties";
+import React, { useState } from "react";
+import { Properities } from "../Properties/Properties";
 import { Filter } from "./Filter/Filter";
 import styled from "styled-components";
 
 const Styles = styled.div`
-margin-top: 2%;
-margin-left: 3%;
+  margin-top: 2%;
+  margin-left: 3%;
   .listingsFilter {
     width: 30%;
     max-width: 425px;
@@ -25,13 +25,24 @@ margin-left: 3%;
   }
 `;
 export const Listings = () => {
+  const [state, setState] = useState({
+    minPrice: 0,
+    maxPrice: null,
+    minBeds: 0,
+    maxBeds: null,
+    minBaths: 0,
+    firstFloorPrimary: null,
+    hvacAgeRange: 10,
+    waterHeaterAgeRange: 10,
+  });
+
   return (
     <Styles>
       <div className="listingsFilter">
-        <Filter />
+        <Filter state={state} setState={setState} />
       </div>
       <div className="listingsData">
-        <Properities />
+        <Properities state={state} setState={setState} />
       </div>
     </Styles>
   );

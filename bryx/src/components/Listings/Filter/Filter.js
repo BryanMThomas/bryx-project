@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Form, Button } from "react-bootstrap";
 import styled from "styled-components";
 
@@ -28,21 +28,10 @@ const Styles = styled.div`
     margin-left: 5px;
   }
 `;
-export const Filter = () => {
-  const [state, setState] = useState({
-    minPrice: 0,
-    maxPrice: null,
-    minBeds: 0,
-    maxBeds: null,
-    minBaths: 0,
-    firstFloorPrimary: null,
-    hvacAgeRange: 10,
-    waterHeaterAgeRange: 10,
-  });
-
+export const Filter = (props) => {
   const handleStateChange = (e) => {
     const { name, value } = e.target;
-    setState((prevState) => ({
+    props.setState((prevState) => ({
       ...prevState,
       [name]: value,
     }));
@@ -141,7 +130,7 @@ export const Filter = () => {
         />
         <Form.Group controlId="formBasicRange">
           <Form.Label className="headerLabel">
-            Max HVAC Age <strong> {state.hvacAgeRange} </strong> years
+            Max HVAC Age <strong> {props.state.hvacAgeRange} </strong> years
           </Form.Label>
           <Form.Control
             name="hvacAgeRange"
@@ -154,7 +143,8 @@ export const Filter = () => {
         </Form.Group>
         <Form.Group controlId="formBasicRange">
           <Form.Label className="headerLabel">
-            Max Water Heater Age <strong> {state.waterHeaterAgeRange} </strong>
+            Max Water Heater Age{" "}
+            <strong> {props.state.waterHeaterAgeRange} </strong>
             years
           </Form.Label>
           <Form.Control
@@ -172,7 +162,7 @@ export const Filter = () => {
             size="lg"
             variant="secondary"
             onClick={() => {
-              console.log("state:", state);
+              console.log("state:", props.state);
             }}
           >
             Apply

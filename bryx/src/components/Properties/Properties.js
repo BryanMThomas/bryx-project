@@ -8,7 +8,7 @@ const Styles = styled.div`
   width: 1000px;
 `;
 
-export const Properities = () => {
+export const Properities = (props) => {
   let [responseData, setResponseData] = useState({});
   useEffect(() => {
     getAllPropertyData()
@@ -35,7 +35,7 @@ export const Properities = () => {
       <Styles>
         <CardDeck>
           {responseData.map((element, index) => (
-            <Property item={element} key={`property-${index}`}></Property>
+            <Property item={element} key={`property-${index}`} state = {props.state} setState = {props.setState}></Property>
           ))}
         </CardDeck>
       </Styles>
