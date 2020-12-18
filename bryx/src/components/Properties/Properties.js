@@ -35,7 +35,7 @@ export const Properities = () => {
       <Styles>
         <CardDeck>
           {responseData.map((element, index) => (
-            <Property item={element} key={`dataitem-${index}`}></Property>
+            <Property item={element} key={`property-${index}`}></Property>
           ))}
         </CardDeck>
       </Styles>
