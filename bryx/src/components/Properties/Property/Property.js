@@ -18,7 +18,6 @@ export const Property = (props) => {
   if (!filterProperties(props.state, props.item)) {
     return null;
   }
-
   //Creates Cards and Modals for properties
   return (
     <Styles>

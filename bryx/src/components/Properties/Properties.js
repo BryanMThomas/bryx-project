@@ -35,7 +35,12 @@ export const Properities = (props) => {
       <Styles>
         <CardDeck>
           {responseData.map((element, index) => (
-            <Property item={element} key={`property-${index}`} state = {props.state} setState = {props.setState}></Property>
+            <Property
+              item={element}
+              key={`property-${index}`}
+              state={props.state}
+              setState={props.setState}
+            ></Property>
           ))}
         </CardDeck>
       </Styles>
