@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Button, Jumbotron, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Styles = styled.div`
@@ -7,7 +8,8 @@ const Styles = styled.div`
     margin-top: 45px;
   }
   .jumbo {
-    background: url(https://bryx-project.s3-us-west-2.amazonaws.com/homeImages/homePage.jpeg) no-repeat fixed center;
+    background: url(https://bryx-project.s3-us-west-2.amazonaws.com/homeImages/homePage.jpeg)
+      no-repeat fixed center;
     background-size: auto 500px;
     color: #efefef;
     height: 500px;
@@ -66,9 +68,16 @@ export const Search = () => {
                 placeholder="Enter an address, city, or ZIP code"
               />
             </Form.Group>
-            <Button className="searchButton" size="lg" variant="secondary">
-              Search
-            </Button>
+            <Link to="/listings">
+              <Button
+                className="searchButton"
+                size="lg"
+                variant="secondary"
+                onClick={() => {}}
+              >
+                Search
+              </Button>
+            </Link>
           </Form>
         </div>
       </Styles>
