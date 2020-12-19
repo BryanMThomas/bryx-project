@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Card, Modal } from "react-bootstrap";
 import styled from "styled-components";
+import { filterProperties, getPrice } from "../../../utilities/util";
 
 const Styles = styled.div`
   margin-top: 2%;
@@ -13,15 +14,12 @@ const Styles = styled.div`
 export const Property = (props) => {
   const [show, setShow] = useState(false);
 
-  const getPrice = (price) => {
-    return "$" + price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  };
-
-  console.log(props.state.minPrice, props.item.price);
-  if (props.state.minPrice > props.item.price) {
-    console.log("hello");
+  //Filters out Properties not matching filter criteria
+  if (!filterProperties(props.state, props.item)) {
     return null;
   }
+
+  //Creates Cards and Modals for properties
   return (
     <Styles>
       <Card

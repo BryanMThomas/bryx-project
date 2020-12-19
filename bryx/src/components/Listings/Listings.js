@@ -27,11 +27,11 @@ const Styles = styled.div`
 export const Listings = () => {
   const [state, setState] = useState({
     minPrice: 0,
-    maxPrice: null,
+    maxPrice: "No Max",
     minBeds: 0,
-    maxBeds: null,
+    maxBeds: "No Max",
     minBaths: 0,
-    firstFloorPrimary: null,
+    firstFloorPrimary: false,
     hvacAgeRange: 10,
     waterHeaterAgeRange: 10,
   });

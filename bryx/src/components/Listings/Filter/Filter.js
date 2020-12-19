@@ -1,18 +1,8 @@
 import React from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import styled from "styled-components";
 
 const Styles = styled.div`
-  .applyButton {
-    background-color: #800000;
-    border: 1px solid gray;
-    box-shadow: none;
-    &:hover {
-      background-color: gray;
-      color: white;
-    }
-    margin-top: 15px;
-  }
   .headerLabel {
     margin-top: 5px;
   }
@@ -30,11 +20,19 @@ const Styles = styled.div`
 `;
 export const Filter = (props) => {
   const handleStateChange = (e) => {
-    const { name, value } = e.target;
-    props.setState((prevState) => ({
-      ...prevState,
-      [name]: value.replace(/\$|,/g,''),
-    }));
+    if (e.target.type === "checkbox") {
+      const { name, checked } = e.target;
+      props.setState((prevState) => ({
+        ...prevState,
+        [name]: checked,
+      }));
+    } else {
+      const { name, value } = e.target;
+      props.setState((prevState) => ({
+        ...prevState,
+        [name]: value.replace(/\$|,/g, ""),
+      }));
+    }
   };
 
   return (
@@ -155,18 +153,6 @@ export const Filter = (props) => {
             defaultValue={10}
             onChange={handleStateChange}
           />
-        </Form.Group>
-        <Form.Group controlId="Apply">
-          <Button
-            className="applyButton"
-            size="lg"
-            variant="secondary"
-            onClick={() => {
-              console.log("state:", props.state);
-            }}
-          >
-            Apply
-          </Button>
         </Form.Group>
       </Form>
     </Styles>
