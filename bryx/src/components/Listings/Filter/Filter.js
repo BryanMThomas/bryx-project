@@ -33,7 +33,7 @@ export const Filter = (props) => {
     const { name, value } = e.target;
     props.setState((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: value.replace(/\$|,/g,''),
     }));
   };
 
