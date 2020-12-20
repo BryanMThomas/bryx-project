@@ -34,6 +34,8 @@ export const Listings = () => {
     firstFloorPrimary: false,
     hvacAgeRange: 10,
     waterHeaterAgeRange: 10,
+    priceSqftMin: 0,
+    priceSQFtMax: "No Max",
   });
 
   return (
