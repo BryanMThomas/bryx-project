@@ -154,7 +154,36 @@ export const Filter = (props) => {
             onChange={handleStateChange}
           />
         </Form.Group>
-      </Form>
+        </Form>
+        <Form inline>
+        <Form.Label className="headerLabel"> Price Per Square Foot </Form.Label>
+        <Form.Group controlId="priceSqftSelect">
+          <Form.Control
+            as="select"
+            defaultValue="No Min"
+            className="selector"
+            name="minPriceSqft"
+            onChange={handleStateChange}
+          >
+            <option>No Min</option>
+            <option>$150</option>
+            <option>$200</option>
+            <option>$250</option>
+          </Form.Control>
+          <Form.Control
+            as="select"
+            defaultValue="No Max"
+            className="selector"
+            name="maxPriceSqft"
+            onChange={handleStateChange}
+          >
+            <option>No Max</option>
+            <option>$200</option>
+            <option>$250</option>
+            <option>$300</option>
+          </Form.Control>
+        </Form.Group>
+        </Form>
     </Styles>
   );
 };

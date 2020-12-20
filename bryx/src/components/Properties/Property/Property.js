@@ -18,6 +18,7 @@ export const Property = (props) => {
   if (!filterProperties(props.state, props.item)) {
     return null;
   }
+  let pricePerSqft = Math.round(props.item.price / props.item.sqft);
   //Creates Cards and Modals for properties
   return (
     <Styles>
@@ -57,6 +58,7 @@ export const Property = (props) => {
           }`}</p>
           <p>{`HVAC was last replaced in: ${props.item.hvacYear}`}</p>
           <p>{`Water Heater was last replaced in: ${props.item.waterHeaterYear}`}</p>
+          <p>{`Price Per Square Foot : $${pricePerSqft}.00`}</p>
           <p>
             <strong>Price: {getPrice(props.item.price)}</strong>
           </p>
