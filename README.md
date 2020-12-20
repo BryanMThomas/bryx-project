@@ -12,9 +12,9 @@ Develop a real estate listing site that fills the gaps in the current market. Co
 
 ## Skills Developed
 
-AWS Lambda, Dynamo DB, S3 Buckets, React JS
+AWS Lambda, Dynamo DB, S3 Buckets, Amplify React JS, useState Hook, React Bootstrap, React Router
 
 ## Architecture 
-![High Level](/readme-assets/basic-architecture.png)
+![High Level](/readme-assets/bryx-architecture.png)
 ## Screen Shots
 ...Coming Soon
